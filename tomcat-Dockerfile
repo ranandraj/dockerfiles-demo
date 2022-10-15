@@ -1,0 +1,4 @@
+FROM tomcat:7
+COPY first.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+

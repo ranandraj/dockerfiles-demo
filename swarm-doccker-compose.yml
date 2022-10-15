@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web1:
+    image: root_web1:latest
+    deploy:
+     replicas: 2
+    ports:
+     - "8099:80"
+    volumes:
+     - /tmp/web1:/var/www/html
+  web2:
+    image: root_web2:latest
+    deploy:
+     replicas: 3
+    ports:
+     - "8089:80"
+    volumes:
+     - /tmp/web2:/var/www/html
+  app1:
+    image: root_app1:latest
+    ports:
+     - "8070:8080"
